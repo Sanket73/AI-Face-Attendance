@@ -15,3 +15,7 @@ segno
 pillow
 
 streamlit
+
+librosa
+resemblyze
+
