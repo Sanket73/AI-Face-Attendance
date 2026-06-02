@@ -7,6 +7,7 @@ from src.components.footer import footer_dashboard
 from src.components.subject_card import subject_card
 from src.database.db import check_teacher_exists , create_teacher,Teacher_login,get_teacher_subject
 from src.components.dialog_create_subject import create_subject_dialog
+from src.components.dialog_share_subject import share_subject_dialog
 
 def Teacher_screen():
     
@@ -31,6 +32,7 @@ def teacher_dashboard():
         st.subheader(f""" Welcome, {teacher_data['name']}""")
         if st.button("Logout",type='secondary',key='loginbackbtn',shortcut="control+backspace"):
             st.session_state['is_logged_in'] = False
+            del st.session_state.teacher_data
             st.rerun()
     
     st.space()
@@ -89,18 +91,19 @@ def teacher_tab_manage_subjects():
                 ("🫂","Students", sub['total_students']),
                 ("🕰️","Classes", sub['total_classes']),
             ]
-        def share_btn():
-            if st.button(f"Share Code: {sub['name']}",key=f"share_{sub['subject_code']}", icon = ":material/share:"):
-                share_subject_dialog(sub['name'],sub['subject_code'])
-            st.space()
-            
-        subject_card(
-            name = sub['name'],
-            code = sub['subject_code'],
-            section = sub['section'],
-            stats = stats,
-            footer_dashboard = share_btn
-        )
+
+            def share_btn():
+                if st.button(f"Share Code: {sub['name']}", key=f"share_{sub['subject_code']}", icon=":material/share:"):
+                    share_subject_dialog(sub['name'], sub['subject_code'])
+                st.space()
+
+            subject_card(
+                name=sub['name'],
+                code=sub['subject_code'],
+                section=sub['section'],
+                stats=stats,
+                footer_callback=share_btn
+            )
         
     else:
         st.info("NO SUBJECTS FOUND. CREATE ONE ABOVE")
