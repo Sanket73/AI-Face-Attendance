@@ -17,5 +17,4 @@ segno
 pillow
 
 librosa
-resemblyze
 
