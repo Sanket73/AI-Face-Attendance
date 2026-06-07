@@ -52,7 +52,8 @@ def style_base_layout():
                     font-size: 3.5rem !important;
                     line-height:1.1 !important;
                     margin-bottom:0rem !important;
-                    
+                    color: #1a1a1a !important;            
+                    -webkit-text-fill-color: #1a1a1a !important;
                 }
                 
                 h2 {
@@ -60,11 +61,13 @@ def style_base_layout():
                     font-size: 2rem !important;
                     line-height:0.8 !important;
                     margin-bottom:0rem !important;
-                    
+                    color: #1a1a1a !important;               
+                    -webkit-text-fill-color: #1a1a1a !important;
                 }
                 
                 h3, h4, p {
                     font-family: 'Outfit', sans-serif;
+                    color: #1a1a1a !important; 
                 }
                 
                 button{
