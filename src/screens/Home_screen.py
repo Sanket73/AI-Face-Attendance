@@ -10,6 +10,16 @@ def Home_screen():
     style_base_layout()
     style_background_home()
     
+    st.markdown("""
+        <style>
+            /* Fix header text color on mobile */
+            h1, h2, h3, .stHeading, [data-testid="stHeadingWithActionElements"] h1 {
+                color: #1a1a1a !important;
+                -webkit-text-fill-color: #1a1a1a !important;
+            }
+        </style>
+    """, unsafe_allow_html=True)
+    
     col1, col2 = st.columns(2, gap="large")
     
     with col1:
