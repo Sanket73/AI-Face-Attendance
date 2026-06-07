@@ -10,6 +10,12 @@ def main():
         page_title='SnapClass - Making Attendance faster using AI',
         page_icon="https://i.ibb.co/YTYGn5qV/logo.png"
     )
+    
+    st.markdown(
+        '<meta http-equiv="refresh" content="1800">',
+        unsafe_allow_html=True
+    )
+    
     if 'login_type' not in st.session_state:
         st.session_state['login_type'] = None
         
