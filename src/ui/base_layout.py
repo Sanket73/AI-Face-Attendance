@@ -97,6 +97,17 @@ def style_base_layout():
                     transition: transform 0.25s ease-in-out !important;
                 }
                 
+                button[kind="tertiary"] p,
+                    button[kind="tertiary"] span,
+                    button[kind="tertiary"] div {
+                        color: white !important;
+                    }
+
+                    button[kind="tertiary"] svg {
+                        fill: white !important;
+                    }
+                
+                
                 button:hover{
                     transform:scale(1.05)
                 }
