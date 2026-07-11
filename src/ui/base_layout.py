@@ -127,6 +127,14 @@ def style_base_layout():
                 div[data-testid="stDialog"] input {
                     background-color: #F0F2F6 !important;
                     color: #1a1a1a !important;
+                    -webkit-text-fill-color: #1a1a1a !important;
+                    border: 1px solid #d0d0d0 !important;
+                }
+                
+                div[data-testid="stDialog"] input::placeholder {
+                    color: #6b6b6b !important;
+                    opacity: 1 !important;
+                    -webkit-text-fill-color: #6b6b6b !important;
                 }
             </style>   
              
