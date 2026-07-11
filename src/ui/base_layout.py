@@ -111,6 +111,23 @@ def style_base_layout():
                 button:hover{
                     transform:scale(1.05)
                 }
+                
+                div[data-testid="stDialog"] > div {
+                    background-color: #FFFFFF !important;
+                }
+                
+                div[data-testid="stDialog"] h1,
+                div[data-testid="stDialog"] h2,
+                div[data-testid="stDialog"] label,
+                div[data-testid="stDialog"] p {
+                    color: #1a1a1a !important;
+                    -webkit-text-fill-color: #1a1a1a !important;
+                }
+                
+                div[data-testid="stDialog"] input {
+                    background-color: #F0F2F6 !important;
+                    color: #1a1a1a !important;
+                }
             </style>   
              
                 """
