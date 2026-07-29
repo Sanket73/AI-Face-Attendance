@@ -20,5 +20,5 @@ def subject_card(name, code, section, stats = None, footer_callback = None , key
     st.markdown(html, unsafe_allow_html=True)
 
     if footer_callback:
-        footer_callback(key_suffix)
+        footer_callback()
     
